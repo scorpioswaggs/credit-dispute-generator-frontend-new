@@ -1,0 +1,28 @@
+{{HEADER}}
+
+To Whom It May Concern:
+
+I am writing to dispute information that appears on my credit report. After reviewing my credit report, I noticed an error regarding the above-referenced account.
+
+The following information is being disputed:
+- Dispute Category: {{DISPUTE_CATEGORY}}
+- Specific Issue: {{DISPUTE_SUBCATEGORY}}
+- Reason: {{DISPUTE_REASON}}
+
+According to the Fair Credit Reporting Act (FCRA), you are required to report accurate information to the credit bureaus. I request that you investigate this matter and correct the reporting according to Metro 2 Format standards.
+
+{{#if ADDITIONAL_DETAILS}}
+Additional information: {{ADDITIONAL_DETAILS}}
+{{/if}}
+
+The Metro 2 Format is the standard format for furnishing consumer credit information to credit reporting agencies. As a data furnisher, you are required to comply with the Credit Reporting Resource Guide (CRRG) published by the Consumer Data Industry Association (CDIA), which outlines the proper procedures for reporting consumer credit data.
+
+I request that you:
+1. Conduct a reasonable investigation into this matter
+2. Review all relevant information provided in this dispute
+3. Correct the inaccurate information in accordance with Metro 2 Format requirements
+4. Notify all credit bureaus of the correction
+
+Please investigate this matter and update your records accordingly. I look forward to your prompt resolution of this issue.
+
+{{SIGNATURE}}

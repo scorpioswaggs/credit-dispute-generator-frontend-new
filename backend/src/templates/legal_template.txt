@@ -1,0 +1,30 @@
+{{HEADER}}
+
+To Whom It May Concern:
+
+I am writing to dispute information that appears on my credit report in accordance with my rights under the Fair Credit Reporting Act (FCRA), 15 U.S.C. § 1681 et seq., the Fair Debt Collection Practices Act (FDCPA), 15 U.S.C. § 1692 et seq., and applicable FTC regulations.
+
+I dispute the following information in my file:
+- Dispute Category: {{DISPUTE_CATEGORY}}
+- Specific Issue: {{DISPUTE_SUBCATEGORY}}
+- Reason: {{DISPUTE_REASON}}
+
+This information is inaccurate because: {{DISPUTE_REASON}}
+
+{{#if ADDITIONAL_DETAILS}}
+Additional information: {{ADDITIONAL_DETAILS}}
+{{/if}}
+
+Under Section 611(a) of the FCRA (15 U.S.C. § 1681i(a)), you are required to conduct a reasonable investigation and to remove or correct any information that is found to be inaccurate, incomplete, or unverifiable. Furthermore, Section 623(b) of the FCRA (15 U.S.C. § 1681s-2(b)) requires that furnishers of information to consumer reporting agencies conduct an investigation upon receiving notice of a dispute.
+
+If you are a debt collector, I remind you that under Section 809(b) of the FDCPA (15 U.S.C. § 1692g(b)), if a consumer notifies the debt collector in writing that the debt is disputed, the debt collector must cease collection of the debt until the debt collector obtains verification of the debt and a copy of such verification is mailed to the consumer.
+
+I request that you:
+1. Conduct a thorough investigation of this matter as required by law
+2. Provide me with copies of any documentation used to verify this account
+3. Remove or correct the disputed information on my credit report
+4. Notify all credit bureaus to which you have reported this information of your findings
+
+I am aware of my rights under federal law and am prepared to take further action if this matter is not resolved satisfactorily.
+
+{{SIGNATURE}}
