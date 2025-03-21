@@ -1,7 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+
+// Theme
+import theme from './theme';
 
 // Context Providers
 import { AuthProvider, useAuth } from './contexts/AuthContext';
@@ -31,6 +34,11 @@ import SubscriptionStatus from './components/Subscription/SubscriptionStatus';
 // Affiliate Components
 import AffiliateLinks from './components/Affiliate/AffiliateLinks';
 
+// Support Components
+import FAQ from './components/Support/FAQ';
+import Contact from './components/Support/Contact';
+import TicketList from './components/Support/TicketList';
+
 // Create a PrivateRoute component
 const PrivateRoute = ({ children }) => {
   const { isAuthenticated, loading } = useAuth();
@@ -41,33 +49,6 @@ const PrivateRoute = ({ children }) => {
   
   return isAuthenticated ? children : <Navigate to="/login" />;
 };
-
-// Create theme
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#1a237e', // Deep navy blue
-    },
-    secondary: {
-      main: '#2e7d32', // Green for growth
-    },
-    background: {
-      default: '#f5f5f5',
-    },
-  },
-  typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-    h1: {
-      fontWeight: 500,
-    },
-    h2: {
-      fontWeight: 500,
-    },
-    h3: {
-      fontWeight: 500,
-    },
-  },
-});
 
 function App() {
   return (
@@ -80,6 +61,16 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/faq" element={
+              <MainLayout>
+                <FAQ />
+              </MainLayout>
+            } />
+            <Route path="/contact" element={
+              <MainLayout>
+                <Contact />
+              </MainLayout>
+            } />
             
             {/* Protected Routes */}
             <Route path="/" element={
@@ -158,6 +149,14 @@ function App() {
               <PrivateRoute>
                 <MainLayout>
                   <AffiliateLinks />
+                </MainLayout>
+              </PrivateRoute>
+            } />
+
+            <Route path="/support/tickets" element={
+              <PrivateRoute>
+                <MainLayout>
+                  <TicketList />
                 </MainLayout>
               </PrivateRoute>
             } />
